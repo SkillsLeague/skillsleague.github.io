@@ -1,0 +1,226 @@
+/*
+font-family: 'Courier Prime', monospace;
+font-family: 'Delicious Handrawn', cursive;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+:root {
+    font-family: 'Open Sans', sans-serif;
+    --bluetheme: rgb(0, 80, 185);
+    --secondary: #76DAE8;
+    --glass: rgba(255, 255, 255, 0.3);
+    --bgcolor: black;
+    --textcolor: rgba(255, 255, 255);
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+}
+
+::selection {
+    background-color: var(--bluetheme);
+    color: white;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.home {
+    transition: ease-in 0.2s;
+}
+
+.element {
+    background: var(--glass);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    animation: appear 1s ease-in;
+    color: var(--textcolor);
+    transition: 0.5s;
+}
+
+.btn {
+    padding: 5px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    border: solid var(--textcolor);
+    border-radius: 5px;
+    border-width: 2px;
+}
+
+
+@keyframes appear {
+    0% {
+        background: rgba(0, 0, 0, 0);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0);
+        backdrop-filter: blur(0px);
+        color: rgb(255, 255, 255, 0);
+    }
+    100% {
+        background: var(--glass);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(8px);
+        color: var(--textcolor);
+    }
+  }
+
+#modesvg {
+    image-rendering:optimizeQuality;
+}
+
+/*Sidebar based on https://www.youtube.com/watch?v=biOMz4puGt8&t=265s*/
+
+main {
+    margin-left: 5rem;
+    padding: 1rem;
+}
+
+.logo {
+    font-weight: bold;
+    margin:0;
+    width:100%;
+    padding-bottom: 2rem;
+    text-align: center;
+    color:white;
+    padding-top: 2rem;
+    background-color: rgba(0, 0, 0);
+}
+
+.logo a {
+    text-decoration: none
+}
+
+.logo img {
+    width: 4rem;
+    vertical-align: middle;
+    background-color: white;
+    border-radius: 100px;
+}
+
+.logo .link-text {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 0.3ch;
+    margin-right: 1rem;
+}
+
+.navbar {
+    position: fixed;
+    background: var(--bluetheme);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border: 0px solid rgba(250, 250, 250, 0.06);
+    color: var(--textcolor);
+    text-align: center;
+    transition: width ease 0.2s;
+    z-index: 100;
+    transition: 0.2s;
+
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-item {
+    width:100%;
+    align-items: center;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: var(--textcolor);
+    text-decoration: none;
+    width: 100%;
+    filter: brightness(2) grayscale(1);
+    
+    transition: 0.5s
+}
+.nav-link svg {
+    min-width: 2rem;
+    margin: 0 1.5rem;
+}
+
+
+.nav-link:hover{
+    filter: brightness(1) grayscale(0);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.link-text {
+    color: white;
+    display: none;
+}
+
+.togglemodes {
+    position: fixed;
+    color: var(--textcolor);
+    right: 20px;
+    font-size: 0.7rem;
+    z-index: 100;
+}
+
+
+
+/*Mobile*/
+@media only screen and (max-width: 600px) {
+
+    .title {
+        width: 25rem;
+    }
+
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+    }
+    .logo {
+        display: none;
+    }
+
+    .navbar-nav{
+        flex-direction: row;
+    }
+
+    .nav-link {
+        justify-content: center;
+    }
+
+    main {
+        margin: 0;
+    }
+}
+
+
+/*Desktop*/
+@media only screen and (min-width: 600px) {
+    .title {
+        width: 40rem;
+    }
+
+    .navbar {
+        top:0;
+        height: 100vh;
+        width: 5rem;
+    }
+    .navbar:hover {
+        width: 20rem;
+    }
+    .navbar:hover .link-text{
+        display: inline-block;
+    }
+}

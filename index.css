@@ -1,0 +1,73 @@
+.bg {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    border: 0;
+    text-align: center;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+#welcomeelement {
+    margin: auto;
+    margin-left: auto;
+    width: 40rem;
+    height: 15rem;
+    top:0;
+    display: block;
+}
+#welcomeelement:hover {
+    transform: scale(1.1);
+}
+
+#welcomeback {
+    color: var(--textcolor)
+
+}
+
+#username {
+    text-decoration: underline;
+}
+
+#usernameinput {
+    width: 15rem;
+    font-size: 12px;
+    border-radius: 5px;
+    border: none;
+    transition: 0.2s;
+    border: 1px var(--textcolor) solid;
+    background-color: var(--bgcolor);
+    color: var(--textcolor);
+    padding-left: 1rem;
+    height: 3em;
+}
+
+
+#usernamebtn {
+    height: 3em;
+    transition: 0.2s;
+    border: 1px var(--textcolor) solid;
+    background-color: var(--bgcolor);
+    color: var(--textcolor);
+    border-radius: 5px;
+}
+#usernamebtn:hover {
+    background-color: rgb(32, 190, 0);
+    color: white;
+}
+
+
+.leaderboard {
+    background-color: rgba(0, 255, 115, 0.322);
+    width: 25em;
+    padding: 1em;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    animation: appear 1s ease-in;
+}
+.refreshbtn {
+    margin-left: 24em;
+}
