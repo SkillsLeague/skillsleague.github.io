@@ -5,6 +5,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Delicious+Handrawn&family=Open+Sans:wght@500&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Lily+Script+One&family=Luckiest+Guy&family=Silkscreen&family=Titan+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="index.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,6 +34,16 @@
 
     <title>SkillsLeague™️</title>
 
+
+    <!--Font families:
+    
+    font-family: 'Cinzel Decorative', cursive;
+    font-family: 'Lily Script One', cursive;
+    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Silkscreen', cursive;
+    font-family: 'Titan One', cursive;
+
+    -->
 </head>
 <body class="home" onload="checkcookie(); checkusername();">
 
@@ -105,13 +116,14 @@
 
 
 <div id="welcomeback">
-    <h1>Welcome back, <span id="username" onclick="changeusername();">Guest</span>!</h1>
+    <h1><span id="greeting">Welcome</span>, <span id="username" onclick="changeusername();">Guest</span>!</h1>
     
     <div class="quizoftheweek">
-        <h1>QUIZ OF THE WEEK</h1> <!--Add background with full height, match the theme of the quiz-->
+        <h1><span>QUIZ OF THE WEEK : THEME</span></h1>
+        <br>
         
         <div class="leaderboard">
-            <h2>LEADERBOARD OF THE LAST QUIZEEE</h2>
+            <h2><b>LEADERBOARD OF THE LAST QUIZ</b></h2>
             <ol>
                 <li>First</li>
                 <li>Second</li>
@@ -119,8 +131,27 @@
                 <li>Fourth</li>
                 <li>Fifth Last</li>
             </ol>
-            <button onclick="window.location.reload();" class="btn refreshbtn">Refresh</button>
+            <button onclick="window.location.reload();window.location.reload();window.location.reload();window.location.reload();window.location.reload();window.location.reload();window.location.reload();" class="btn refreshbtn">Refresh</button>
         </div>
+
+        <br>
+        <button id="startquiz">CLICK TO START</button>
+    </div>
+
+    <br>
+    <br>
+    
+    <div class="latestresources">
+        <h2>CHECKOUT THE LATEST RESOURCES</h2>
+        <br>
+        <p>Nothing to show here - yet.</p>
+        <br>
+    </div>
+
+    <div class="contribute">
+        <h1>CONTRIBUTE</h1>
+        <p>You can contribute to SkillsLeague by submitting an <u>educational</u> game. The best part is that you can make it on Code.org, Scratch, Khan Academy, CodePen, or Replit. This means that programmers of almost any levels can contribute.*</p>
+        <button class="homebtn">SUBMIT</button>
     </div>
 </div>
 
@@ -133,7 +164,59 @@
 
     </main>
 
+
+    <footer>
+
+        <p style="text-align: center;">BY <a style="color: white;" href="https://eisa-s.github.io/">EISA S.</a></p>
+        <br>
+        <table style="text-align: left; font-size: 15px; display: inline-block;">
+            <tr>
+                <th>Menu</th>
+                <th>subjects</th>
+                <th>more</th>
+            </tr>
+            <tr>
+                <td><a href="index.html">Home</a></td>
+                <td>Arabic</td>
+                <td>Our Contributors</td>
+            </tr>
+            <tr>
+                <td><a href="resources.html">Resources & Apps</a></td>
+                <td>English</td>
+                <td>Islamic Studies</td>
+            </tr>
+            <tr>
+                <td><a href="weeklyquiz.html">Weekly Quiz</a></td>
+                <td>Biology</td>
+                <td>E.S Portfolio</td>
+            </tr>
+            <tr>
+                <td><a href="focus.html">Focus</a></td>
+                <td>Chemistry</td>
+            </tr>
+            <tr>
+                <td><a href="about.html">About</a></td>
+                <td>Physics</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Mathematics</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Computer Studies</td>
+            </tr>
+            
+        </table>
+        
+        <img src="images/logo.png" style="margin-top: 60px; margin-right: 20px; float: right;" width="210em">
+
+        <br>
+    </footer>
+
     <script src="scripts.js"></script>
+
+
 
 </body>
 </html>

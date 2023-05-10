@@ -9,6 +9,8 @@ var username;
 var welcomeelement = document.getElementById("welcome");
 var welcomebackelement = document.getElementById("welcomeback");
 
+var greetings = ["Marhaban", "Welcome", "Hello there", "Hi", "Hello", "Hi there", "Greetings"]
+
 
 //setCookie and getCookie functions from w3schools
 function setCookie(cname,cvalue,exdays) {
@@ -55,6 +57,7 @@ function checkusername() {
     welcomeelement.style.display = "none";
     welcomebackelement.style.display = "block";
     document.getElementById("username").innerHTML = usernamecookie;
+    document.getElementById("greeting").innerHTML = greetings[Math.floor(Math.random()*greetings.length)];
     //add an API count to keep track of how many users there are
   }
 }
@@ -69,9 +72,6 @@ function changeusername() {
 }
 
 function darkmode() {
-    document.body.style.background = "rgb(50, 50, 50)";
-    document.body.style.backgroundRepeat = "no-repeat";
-    document.body.style.backgroundSize = "cover";
     r.style.setProperty('--glass', 'rgba(0, 0, 0, 0.3)');
     r.style.setProperty('--textcolor', 'rgba(255, 255, 255, 0.9)');
     r.style.setProperty('--bluetheme', 'rgb(0, 33, 105)');
@@ -85,9 +85,6 @@ function darkmode() {
 }
 
 function lightmode() {
-    document.body.style.background = "white";
-    document.body.style.backgroundRepeat = "no-repeat";
-    document.body.style.backgroundSize = "cover";
     r.style.setProperty('--glass', 'rgba(255, 255, 255, 0.3)');
     r.style.setProperty('--textcolor', 'rgba(0, 0, 0, 0.9)');
     r.style.setProperty('--bluetheme', 'rgb(0, 80, 185)');

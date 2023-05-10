@@ -19,13 +19,18 @@ font-family: 'Roboto', sans-serif;
 }
 
 ::selection {
-    background-color: var(--bluetheme);
-    color: white;
+    background-color: yellow;
+    color: black;
 }
 
 html, body {
     margin: 0;
     padding: 0;
+    background-color: var(--bgcolor);
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 .home {
@@ -73,6 +78,28 @@ html, body {
     image-rendering:optimizeQuality;
 }
 
+
+footer {
+    background-color: rgb(43, 43, 43);
+    margin:0;
+    padding: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+
+    color: white;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer th {
+    color: rgb(160, 160, 160);
+    text-transform: uppercase;
+}
+
+footer table a {
+    color: white;
+}
+
 /*Sidebar based on https://www.youtube.com/watch?v=biOMz4puGt8&t=265s*/
 
 main {
@@ -88,7 +115,8 @@ main {
     text-align: center;
     color:white;
     padding-top: 2rem;
-    background-color: rgba(0, 0, 0);
+    background-color: var(--textcolor);
+    transition: 0.5s;
 }
 
 .logo a {
@@ -98,15 +126,17 @@ main {
 .logo img {
     width: 4rem;
     vertical-align: middle;
-    background-color: white;
+    background-color: var(--bgcolor);
     border-radius: 100px;
+    transition: 0.5s;
 }
 
 .logo .link-text {
-    color: white;
+    color: var(--bgcolor);
     text-decoration: none;
     letter-spacing: 0.3ch;
     margin-right: 1rem;
+    
 }
 
 .navbar {
@@ -203,6 +233,16 @@ main {
     main {
         margin: 0;
     }
+
+    footer th, td {
+        padding: 5px;
+        margin: 0;
+    }
+
+    footer {
+        height: 100vh;
+        
+    }
 }
 
 
@@ -222,5 +262,10 @@ main {
     }
     .navbar:hover .link-text{
         display: inline-block;
+    }
+
+    footer th, td {
+        padding: 15px;
+        
     }
 }
