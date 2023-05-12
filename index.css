@@ -140,7 +140,12 @@
 
 /*Mobile*/
 @media only screen and (max-width: 600px) {
+    .quizoftheweek {
+        height: 100vh;
+    }
+    #startquiz {
     
+    }
 }
 
 /*Desktop*/
@@ -148,5 +153,6 @@
     .leaderboard {
         float: right;
         margin-top: -80px;
+       
     }
 }
